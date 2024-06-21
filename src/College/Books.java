@@ -26,13 +26,13 @@ public class Books {
         return 1;
     }
 
-    public void addBook(Book b) {
+    public void addBook(Book newBook) {
         for (int i = 0; i < count; i++) {
-            if (this.compareBookObjects(b, this.theBooks[i]) == 0)
+            if (this.compareBookObjects(newBook, this.theBooks[i]) == 0)
                 return;
         }
         if (count < MAX_BOOKS) {
-            theBooks[count] = b;
+            theBooks[count] = newBook;
             count++;
         } else {
             System.out.println("No Space to Add More Books.");
